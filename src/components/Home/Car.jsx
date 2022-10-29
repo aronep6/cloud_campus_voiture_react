@@ -32,7 +32,7 @@ function Car({ id, name, kilometers }) {
             padding: '1em' 
         }}>
         <span style={{ fontWeight: "bold" }}>
-            {name} - {kilometers} km
+            {name} - {kilometers} KM
         </span>
         { !edit && <div style={{ display: 'flex', flexDirection: 'row' }}>
             <button onClick={() => setEdit(!edit)}>
@@ -40,7 +40,7 @@ function Car({ id, name, kilometers }) {
             </button>
 
             <button onClick={() => removeCar(id)}>
-                Supprimer
+                Supprimer le véhicule
             </button>
         </div> }
 
@@ -48,7 +48,7 @@ function Car({ id, name, kilometers }) {
             <h4>
                 Modifier une voiture
             </h4>
-            <label htmlFor="car_name">Nom de la voiture</label>
+            <label htmlFor="car_name">Nom du véhicule</label>
             <input type="text" id="car_name" ref={car_name_ref} defaultValue={name} />
             <label htmlFor="car_kilometers">Kilométrage</label>
             <input type="number" id="car_kilometers" ref={car_kilometers_ref} defaultValue={kilometers} />
