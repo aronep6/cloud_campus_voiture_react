@@ -6,6 +6,6 @@ const Display = ({ value }) => {
   )
 }
 
-export default memo(Display, (prevProps, nextProps) => {
-    return prevProps.value >= 9 && nextProps.value >= 9
+export default memo(Display, (_, nextProps) => {
+    return nextProps.value >= 9
 })
